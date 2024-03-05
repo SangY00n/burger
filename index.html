@@ -14,24 +14,24 @@
         .form-container {
             display: flex;
             flex-direction: column;
-            gap: 10px; /* 요소들 사이의 간격 */
-            width: 100%; /* 컨테이너 너비를 최대로 설정 */
-            max-width: 500px; /* 최대 너비를 500px로 설정 */
+            gap: 15px; /* 요소들 사이의 간격 */
+            max-width: 500px; /* 최대 너비 설정 */
+            margin: auto; /* 중앙 정렬 */
             padding: 20px; /* 컨테이너 내부 여백 */
             box-sizing: border-box; /* 패딩을 너비에 포함 */
         }
         input, button {
             width: 100%; /* 폼 요소를 컨테이너 너비에 맞춤 */
-            padding: 10px; /* 입력 필드와 버튼에 여백 추가 */
-            font-size: 16px; /* 모바일 환경을 고려한 폰트 크기 조정 */
+            padding: 15px; /* 입력 필드와 버튼에 여백 추가 */
+            font-size: 18px; /* 기본 폰트 크기 조정 */
+            margin: 5px 0; /* 상하 여백 추가 */
+            box-sizing: border-box; /* 패딩과 테두리를 너비에 포함 */
         }
-        @media (max-width: 600px) {
-            .form-container {
-                width: 90%; /* 화면이 600px 이하일 때 폼 컨테이너 너비를 줄임 */
-            }
+        /* 모바일 화면과 태블릿 화면에서의 스타일 */
+        @media (max-width: 800px) {
             input, button {
-                font-size: 20px; /* 모바일 환경에서 폰트 크기를 더 크게 조정 */
-                padding: 15px 20px; /* 모바일 환경에서 입력 필드와 버튼의 패딩을 더 크게 조정 */
+                font-size: 22px; /* 폰트 크기 증가 */
+                padding: 20px; /* 패딩 증가 */
             }
         }
     </style>
@@ -54,8 +54,8 @@
 </head>
 <body>
     <div class="form-container">
-        <h2>Burger King Number</h2>
-        <input type="number" id="numberInput" placeholder="주문 번호를 입력하세요.">
+        <h2>버거킹 인증번호 확인하기</h2>
+        <input type="number" id="numberInput" placeholder="주문 번호를 입력하세요." />
         <button onclick="calculateNumber()">인증 번호 확인</button>
         <div id="resultDiv"></div>
     </div>
