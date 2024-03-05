@@ -15,9 +15,20 @@
             display: flex;
             flex-direction: column;
             gap: 10px; /* 요소들 사이의 간격 */
+            width: 100%; /* 컨테이너 너비를 최대로 설정 */
+            max-width: 500px; /* 최대 너비를 500px로 설정 */
+            padding: 20px; /* 컨테이너 내부 여백 */
+            box-sizing: border-box; /* 패딩을 너비에 포함 */
         }
         input, button {
             width: 100%; /* 폼 요소를 컨테이너 너비에 맞춤 */
+            padding: 10px; /* 입력 필드와 버튼에 여백 추가 */
+            font-size: 16px; /* 모바일 환경을 고려한 폰트 크기 조정 */
+        }
+        @media (max-width: 600px) {
+            .form-container {
+                width: 90%; /* 화면이 600px 이하일 때 폼 컨테이너 너비를 줄임 */
+            }
         }
     </style>
     <script>
