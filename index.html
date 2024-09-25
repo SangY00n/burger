@@ -48,7 +48,7 @@
             var hundreds = parseInt((x % 1000) / 100);
         
             var result = ((tens * 10) - tens) * 1000000 + units * 100000 + tens;
-            result = result + (10-hundreds)*100 + hundreds*10
+            result = result + ((10-hundreds)%10)*100 + hundreds*10
 
             // 결과를 resultDiv에 표시
             document.getElementById('resultDiv').innerHTML = "인증 번호: " + result.toString().padStart(8, '0');
